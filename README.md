@@ -41,18 +41,18 @@ Please follow the steps below to set up your development environment. It is reco
 cd Vehicle model
 python test_on_synchronized_driving_cycle.py 
 ```
-You will see 'results_plot' in your file, and soc & fuel per KM et.al printed in the console.
+You will see `results_plot` in your file, and soc & fuel per KM et.al printed in the console.
 ### 2. Replace the Vehicle Model of your own. 
-To use your own vehicle model , You need to replace the API 'get_next_fuel_and_soc' by your vehicle model, which takes '(u, v, a, current_soc)' as input and returns '(fuel_cost, next_soc)' as output.
-Run 'data_process6.py' to sampling trainning dataset. Modify parameter in 'dp_process' to set your soc target. It could take more than 2 weeks to sample the whole data. 
+To use your own vehicle model , You need to replace the API `get_next_fuel_and_soc` by your vehicle model, which takes `(u, v, a, current_soc)` as input and returns `(fuel_cost, next_soc)` as output.
+Run `data_process6.py` to sampling trainning dataset. Modify parameter in `dp_process` to set your soc target. It could take more than 2 weeks to sample the whole data. 
 Sampling the full dataset may take a long time; distributed sampling across multiple devices is recommended.
 ```bash
 python data_process6.py 
 ```
-The torch dataset will be saved on 'Vehicle model/dataset/saved_dataset'. Move your dataset to 'Deep model/dataset'. Open a terminal under Deep Model file, run:
+The torch dataset will be saved on `Vehicle model/dataset/saved_dataset`. Move your dataset to `Deep model/dataset`. Open a terminal under Deep Model file, run:
 ```bash
 python train.py 
 ```
 to train the model. 
-After finish your traning, edit model path in 'test_on_synchronized_driving_cycle.py' to test your model. 
-Code 'data process' 2 - 5 is to process original data VED to training driving cycle. The results has been saved in 'Vehicle model/dataset/buffer'. 
+After finish your traning, edit model path in `test_on_synchronized_driving_cycle.py` to test your model. 
+Code `data process` 2 - 5 is to process original data VED to training driving cycle. The results has been saved in `Vehicle model/dataset/buffer`. 
