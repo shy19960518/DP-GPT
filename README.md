@@ -13,7 +13,7 @@ This work uses DP to generate control strategies on taxi data and guides the tra
 - **Data prepare**: Raw data completion, segmentation, and augmentation.
 - **Data Sampling**: Using improved DP to collect (Driving cycles ⮕ Cost matrix J) as input–output pairs.
 - **Model**: A Transformer decoder-only based model, learn the above mapping in parallel and use greedy strategy to get the final control strategy.
-- **Train/Valid**: The model is traninng on [VED](https://github.com/gsoh/VED), and testing on 17 standard driving cycle. 
+- **Train/Valid**: The model is traninng on [VED](https://github.com/gsoh/VED), and testing on 17 standard driving cycles. 
 
 ## ⚙️ Environment Setup
 
