@@ -1,0 +1,15 @@
+name: DPGPT
+channels:
+  - pytorch
+  - nvidia
+dependencies:
+  - python == 3.8.5
+  - pytorch == 2.4.1
+  - torchvision
+  - pytorch-cuda=12.1
+  - pip:
+    - matplotlib
+    - pandas
+    - pyproj
+    - scipy
+    - tqdm
